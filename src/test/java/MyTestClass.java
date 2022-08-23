@@ -47,7 +47,7 @@ class MyTestClass {
         //Greets multiple people if the input is a String array
         MyClass myClass = new MyClass();
         String actual =  myClass.greet(new String[]{"Chris", "Frank"});
-        String expected = "Hello, Chris and Frank";
+        String expected = "Hello, Chris and Frank.";
         assertEquals(expected,actual);
     }
 

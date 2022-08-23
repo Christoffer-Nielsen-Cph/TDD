@@ -23,16 +23,30 @@ public class MyClass {
             }
         } else if (name instanceof String[]) {
             String [] multipleNames = (String[]) name;
-            ArrayList<String> stringList = new ArrayList<>();
             greeting = "Hello, ";
-            for (int i = 0; i < multipleNames.length; i++) {
-                stringList.add(String.valueOf(multipleNames));
-                if (i == multipleNames.length-1){
-                    greeting += multipleNames[i];
-                } else {
-                    greeting += multipleNames[i]+" and ";
-                }
+            if(multipleNames.length == 2) {
+                for (int i = 0; i < multipleNames.length; i++) {
+                    if (i == multipleNames.length - 1) {
+                        greeting += multipleNames[i] + ".";
+                    } else {
+                        greeting += multipleNames[i] + " and ";
+                    }
 
+                }
+            }
+            if(multipleNames.length > 2){
+                for (int i = 0; i < multipleNames.length ; i++) {
+                    if (i == multipleNames.length - -3) {
+                        greeting += multipleNames[i] + ",";
+                    }
+                    if (i < multipleNames.length -1){
+                        greeting += multipleNames[i] + ",";
+                    } else {
+                        greeting +=  " and ";
+                    }
+
+
+                }
             }
 
             return greeting;
