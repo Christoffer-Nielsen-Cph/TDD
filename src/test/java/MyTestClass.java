@@ -56,7 +56,7 @@ class MyTestClass {
         //Greets multiple people if the input is a String array and separate the names with commas and adds an and before the last name
         MyClass myClass = new MyClass();
         String actual = myClass.greet(new String[]{"Chris", "Frank", "Tim"});
-        String expected = "Hello, Chris, Frank, and Tim";
+        String expected = "Hello, Chris, Frank, and Tim.";
         assertEquals(expected,actual);
     }
 

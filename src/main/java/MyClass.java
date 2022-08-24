@@ -35,14 +35,16 @@ public class MyClass {
                 }
             }
             if(multipleNames.length > 2){
+
+                int nameLength = multipleNames.length;
+
                 for (int i = 0; i < multipleNames.length ; i++) {
-                    if (i == multipleNames.length - -3) {
-                        greeting += multipleNames[i] + ",";
-                    }
-                    if (i < multipleNames.length -1){
-                        greeting += multipleNames[i] + ",";
+                    if (i == multipleNames.length - nameLength) {
+                        greeting += multipleNames[i] + ", ";
+                    } else if(i == multipleNames.length - nameLength+1){
+                        greeting += multipleNames[i] + ", and ";
                     } else {
-                        greeting +=  " and ";
+                        greeting += multipleNames[i]+".";
                     }
 
 
